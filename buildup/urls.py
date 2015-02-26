@@ -1,75 +1,145 @@
 from django.conf.urls import patterns, url
-urlpatterns = patterns('', url(r'^$', 'buildup.views.hello', name='hello'))
-import subprocess
-subprocess.call(["say", """Is this the real life?
-Is this just fantasy?
-Caught in a landslide,
-No escape from reality.
-
-Open your eyes,
-Look up to the skies and see,
-I'm just a poor boy, I need no sympathy,
-Because I'm easy come, easy go,
-Little high, little low,
-Anyway the wind blows doesn't really matter to me, to me.
-
-Mama, just killed a man,
-Put a gun against his head,
-Pulled my trigger, now he's dead.
-Mama, life had just begun,
-But now I've gone and thrown it all away.
-
-Mama, ooh,
-Didn't mean to make you cry,
-If I'm not back again this time tomorrow,
-Carry on, carry on as if nothing really matters.
-
-Too late, my time has come,
-Sent shivers down my spine,
-Body's aching all the time.
-Goodbye, everybody, I've got to go,
-Gotta leave you all behind and face the truth.
-
-Mama, ooh (anyway the wind blows),
-I don't wanna die,
-I sometimes wish I'd never been born at all.
-
-I see a little silhouetto of a man,
-Scaramouche, Scaramouche, will you do the Fandango?
-Thunderbolt and lightning,
-Very, very frightening me.
-(Galileo) Galileo.
-(Galileo) Galileo,
-Galileo Figaro
-Magnifico.
-
-I'm just a poor boy, nobody loves me.
-He's just a poor boy from a poor family,
-Spare him his life from this monstrosity.
-
-Easy come, easy go, will you let me go?
-Bismillah! No, we will not let you go. (Let him go!)
-Bismillah! We will not let you go. (Let him go!)
-Bismillah! We will not let you go. (Let me go!)
-Will not let you go. (Let me go!)
-Never, never let you go
-Never let me go, oh.
-No, no, no, no, no, no, no.
-Oh, mama mia, mama mia (Mama mia, let me go.)
-Beelzebub has a devil put aside for me, for me, for me.
-
-So you think you can stone me and spit in my eye?
-So you think you can love me and leave me to die?
-Oh, baby, can't do this to me, baby,
-Just gotta get out, just gotta get right outta here.
-
-(Oh, yeah, oh yeah)
-
-Nothing really matters,
-Anyone can see,
-Nothing really matters,
-Nothing really matters to me.
-
-Anyway the wind blows.
-
-"""])
+urlpatterns = patterns('', url(r'^$', 'buildup.views.hello', name='hello'),
+url(r'^hello_template/(?P<yourname>\w+)/$', 'buildup.views.hello_template', name='hello_template'))                       
+#import subprocess
+#subprocess.call(["say", """Everybody get up, it's time to slam now
+#We got a real jam goin' down
+#Welcome to the Space Jam
+#Here's your chance, do your dance at the Space Jam, alright
+#
+#Come on and slam and welcome to the jam
+#Come on and slam, if you wanna jam
+#
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#Hey you, watcha gonna do
+#
+#Party people in the house, let's go
+#It's your boy, 'Jayski' a'ight so
+#Pass that thing and watch me flex
+#Behind my back, you know what's next
+#
+#To the jam, all in your face
+#Wassup, just feel the bass
+#Drop it, rock it, down the room
+#Shake it, quake it, space Kaboom
+#
+#Just work that body, work that body
+#Make sure you don't hurt no body
+#Get wild and lose your mind
+#Take this thing into over-time
+#
+#Hey DJ, turn it up
+#QCD, goin' burn it up
+#C'mon y'all get on the floor
+#So hey, let's go a'ight
+#
+#Everybody get up, it's time to slam now
+#We got a real jam goin' down
+#Welcome to the Space Jam
+#Here's your chance, do your dance at the Space Jam, alright
+#
+#Wave your hands in the air if you feel fine
+#We're gonna take it into overtime
+#Welcome to the Space Jam
+#Here's your chance, do your dance at the Space Jam, alright
+#
+#C'mon it's time to get hype say, "Whoop, there it is"
+#C'mon all the fellas say, "Whoop, there it is"
+#C'mon one time for the ladies say, "Whoop, there it is"
+#Now all the fellas say, "Whoop, there it is"
+#
+#C'mon and run, baby run
+#C'mon, C'mon, do it, run baby run
+#Yeah, you want a hoop, so shoot, baby shoot
+#Yeah, it's time to hook, so shoot, baby shoot baby
+#
+#C'mon and slam, and welcome to the jam
+#C'mon and slam, if you wanna jam
+#C'mon and slam, and welcome to the jam
+#C'mon and slam, if you wanna jam
+#
+#Slam, Bam, thank you ma'am
+#Get on the floor and jam
+#QCD on the microphone
+#Girl, you got me in a zone
+#
+#C'mon, c'mon and start the game
+#Break it down, tell me your name
+#We the team, I'm the coach
+#Let's dance all night from coast to coast
+#
+#Just slide, from left to right
+#Just slide, yourself enlight
+#QCD, drop the bass
+#3-1-1 all in your face
+#
+#Jam on it, let's have some fun
+#Jam on it, one on one
+#You run the, "O" and I run the "D"
+#So c'mon baby just jam for me
+#
+#Everybody get up, it's time to slam now
+#We got a real jam goin' down
+#Welcome to the Space Jam
+#Here's your chance, do your dance at the Space Jam, alright
+#
+#Wave your hands in the air if you feel fine
+#We're gonna take it into overtime
+#Welcome to the Space Jam
+#Here's your chance, do your dance at the Space Jam, alright
+#
+#Hey ladie, yeah
+#Y'all ready stop? No
+#Y'all wanna know why? Why?
+#'Cuz it's a Slam Jam
+#
+#Fellas, yeah
+#Y'all ready to stop, no
+#Y'all wanna know why? Why?
+#It's time to Slam Jam
+#
+#Everybody get up, it's time to slam now
+#We got a real jam goin' down
+#Welcome to the Space Jam
+#Here's your chance, do your dance at the Space Jam, alright
+#
+#Wave your hands in the air if you feel fine
+#We're gonna take it into overtime
+#Welcome to the Space Jam
+#Here's your chance, do your dance at the Space Jam, alright
+#
+#C'mon, everybody say, "Nah nah nah nah nah"
+#C'mon, C'mon let me hear you say, "Hey ey ey O"
+#C'mon, C'mon everybody, "Nah nah nah nah nah"
+#Just take the time to say "Hey ey ey O"
+#
+#Check it out, check it out, y'all ready for this? You know it
+#Nah, y'all ain't ready, y'all ready for this? You know it
+#C'mon check it out, y'all ready to jam? You know it
+#Nah, I, I don't think so, y'all ready to jam? You know it
+#C'mon
+#
+#"""])

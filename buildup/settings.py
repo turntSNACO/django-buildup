@@ -8,3 +8,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, "buildup/templates"),
 )
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'buildup.db')
+    }
+}
+INSTALLED_APPS = (
+    'buildup',
+)

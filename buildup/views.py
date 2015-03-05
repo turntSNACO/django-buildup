@@ -4,3 +4,5 @@ def hello(request):
     return HttpResponse("Come on and slam")
 def hello_template(request, yourname):
   return render(request, "hello.html", { "yourname": yourname, "foobar": 12 })
+def megaman(request):
+    return render(request,'megaman.html')

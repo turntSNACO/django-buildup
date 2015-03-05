@@ -16,4 +16,6 @@ DATABASES = {
 }
 INSTALLED_APPS = (
     'buildup',
+    "django.contrib.staticfiles"
 )
+STATIC_URL='/static/'

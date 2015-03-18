@@ -1,0 +1,26 @@
+TO DO LIST:
+- use ethan's game
+- sprites/animations
+    >edit images
+    >make sprite sheets
+    >sprite size
+- controls
+    >mapping controls
+    >movement speed
+    >dif. animations for each movement
+- level design
+    >design maps/enviroments
+- attacking
+    >projectiles(guns, grenades)
+- AI
+    >enemy AI
+    >possibly companian AI
+- ragdoll physics
+    >hershey
+        .destuctible environments
+- high scores
+    >leaderboards
+- sound design
+    >music
+    >sound effects
+

@@ -65,7 +65,7 @@ var main = {
   preload: function() {
   
       game.load.image('gameWin', '/static/mario_crying_with_FLUDD.png');
-      game.load.image('megaman', '/static/megamanidle.png');
+      game.load.image('odst', '/static/odst.png');
      
       game.load.image('background', '/static/bg1.png');
       
@@ -244,7 +244,7 @@ setTimeout(this.spawn, 2000);
        }
       
       if (player.body.velocity.x === 0 && player.body.velocity.y === 0) {    
-          player.loadTexture('megaman');
+          player.loadTexture('odst');
       }
     }
   },
